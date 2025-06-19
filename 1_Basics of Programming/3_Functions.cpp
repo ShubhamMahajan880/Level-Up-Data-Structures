@@ -235,38 +235,115 @@ using namespace std;
 
 // Pointers in cpp -
 
+// int main()
+// {
+
+//     int c = 10;
+//     int *ptr = &c;                     // int ptr tyep can never store the value, it always stores the address itself
+//     cout << &c << "==" << ptr << endl; // 0x61fed4==0x61fed4
+
+//     cout << sizeof(ptr) << endl;//4 - size of int pointer
+
+//     float p = 3.1416;
+//     float *ptr2 = &p;
+//     cout << &p << "==" << ptr2 << endl;//0x61ff00==0x61ff00
+//     cout << sizeof(ptr2) << endl;//4 - size of float pointer
+
+//     // Pointer of Pointer Approach -
+//     int **pptr = &ptr;
+//     cout<<&ptr<<"=="<<pptr<<endl;//0x61ff00==0x61ff00
+
+//     // Dereference Operator -
+//     int a = 20;
+//     int *ptr3 = &a;
+//     cout<<&a<<endl;//0x61fef8
+//     cout<<*(&a)<<endl;//20
+//     cout<<*ptr3<<endl;//20
+
+//     // Null Pointer
+//     // if pointer is not pointing the address of any variable then this will give Garbage Value
+
+//     int *ptr4;
+//     cout<<ptr4<<"\n";//0x76e18c1d - Automatically gives Garbage Value
+
+//     int *ptr5=NULL;
+//     cout<<ptr5<<endl;//0x74e18c1d
+//     cout<<*ptr5<<endl;//0
+// }
+// ____________ ____________ ____________ ____________ ____________
+
+// Passing Arguements in funciton -
+// Pass by value - when parameter is a copy of actual arguement variable in memory
+
+// void changeA(int a)
+// {
+//     a=30;
+//     cout<<a<<endl;
+// }
+
+// int main()
+// {
+
+//     int a = 10;
+//     changeA(a);//30 - Funciton call kiya he to function declaratin me jaa kr function me variable ki assigned value ko call krega
+//     cout<<a<<endl;//10 - vapas se main fun me aa gya h to iss scope me jo variable defined h usko value ko print krega
+// }
+
+// Pass by Reference - using pointer
+
+// void changeB(int *ptr)
+// {
+//     *ptr = 20;
+//     cout << *ptr << endl;
+// }
+// int main()
+// {
+//     int a = 10;
+//     changeB(&a);//20 - call by address he. Ptr me &a h and function declaration me us pointer se uski valuie assign hui he. to calling me funciton ki under variable ki assigned value print hogi
+
+//     cout << a << endl;//20  - return to main function - to uske ander var ki jo value defined he voprint hogi
+// }
+
+// Pass by Reference - using Reference Variables 
+// void changeC(int *ptr)
+// {
+//     *ptr = 20;
+//     cout<<*ptr<<endl;
+// }
+
+// void changeD(int &c)
+// {
+//     c=20;
+//     cout<<c<<endl;
+// }
+// int main()
+// {
+//     int a = 10;
+//     int &b = a;
+//     b=25;
+//     cout<<b<<endl;//25
+//     cout<<a<<endl;//25
+
+//     int c =10;
+//     changeD(c);//20
+//     cout<<c<<endl;//20 - yaha pr pointer ke saath reference diya h fiun declaration me to main value me bhi change aayag
+//     // This is call by reference using reference variable. memory will back to main function but as we're used reference var, so there will also change in main fun too.
+// }
+
+// Qun - 
+
 int main()
 {
+    int x=5, y=10;
+    int *ptr1 = &x, *ptr2 = &y;
+    ptr2=ptr1;
 
-    int c = 10;
-    int *ptr = &c;                     // int ptr tyep can never store the value, it always stores the address itself
-    cout << &c << "==" << ptr << endl; // 0x61fed4==0x61fed4
-    
+    cout<<ptr2<<endl;//0x61ff04
+    cout<<ptr1<<endl;//0x61ff04
+    cout<<&x<<endl;//0x61ff04   
 
-    cout << sizeof(ptr) << endl;//4 - size of int pointer
-
-    float p = 3.1416;
-    float *ptr2 = &p;
-    cout << &p << "==" << ptr2 << endl;//0x61ff00==0x61ff00
-    cout << sizeof(ptr2) << endl;//4 - size of float pointer
-
-    // Pointer of Pointer Approach - 
-    int **pptr = &ptr;
-    cout<<&ptr<<"=="<<pptr<<endl;//0x61ff00==0x61ff00
-    
-    // Dereference Operator - 
-    int a = 20;
-    int *ptr3 = &a;
-    cout<<&a<<endl;//0x61fef8
-    cout<<*(&a)<<endl;//20
-    cout<<*ptr3<<endl;//20
-
-    // Null Pointer
-    // if pointer is not pointing the address of any variable then this will give Garbage Value
-    
-    int *ptr4;
-    cout<<ptr4<<"\n";//0x76e18c1d - Automatically gives Garbage Value
-
-
-
+    // What os the typr of the following variables - 
+    float*a,b;
+    // a - float pointer, b - normal float variable
+     
 }
