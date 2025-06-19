@@ -190,44 +190,83 @@ using namespace std;
 
 // QUn - Print all prime numbers from 2 to range n
 
-bool isPrime(int n)
-{
-    if (n == 1)
-    {
-        cout << "No prime nor Composite" << endl;
-    }
+// bool isPrime(int n)
+// {
+//     if (n == 1)
+//     {
+//         cout << "No prime nor Composite" << endl;
+//     }
 
-    for (int i = 2; i*i <=n; i++)
-    {
-        if (n % i == 0)
-        {
-            return false;
-        }
-        
-    }
-    return true;
-}
-void AllPrimes(int n)
-{
-    for (int i = 2; i <= n; i++)
-    {
-        if (isPrime(i))
-        {
-            cout << i << "  is prime number" << endl;
-        }
-    }
-    cout<<endl;
-}
+//     for (int i = 2; i*i <=n; i++)
+//     {
+//         if (n % i == 0)
+//         {
+//             return false;
+//         }
+
+//     }
+//     return true;
+// }
+// void AllPrimes(int n)
+// {
+//     for (int i = 2; i <= n; i++)
+//     {
+//         if (isPrime(i))
+//         {
+//             cout << i << "  is prime number" << endl;
+//         }
+//     }
+//     cout<<endl;
+// }
+// int main()
+// {
+//     AllPrimes(13);
+//     return 0;
+// /*
+// 2  is prime number
+// 3  is prime number
+// 5  is prime number
+// 7  is prime number
+// 11  is prime number
+// 13  is prime number
+//  */
+// }
+// ____________ ____________ ____________ ____________ ____________
+
+// Pointers in cpp -
+
 int main()
 {
-    AllPrimes(13);
-    return 0;
-/* 
-2  is prime number
-3  is prime number
-5  is prime number
-7  is prime number
-11  is prime number
-13  is prime number
- */    
+
+    int c = 10;
+    int *ptr = &c;                     // int ptr tyep can never store the value, it always stores the address itself
+    cout << &c << "==" << ptr << endl; // 0x61fed4==0x61fed4
+    
+
+    cout << sizeof(ptr) << endl;//4 - size of int pointer
+
+    float p = 3.1416;
+    float *ptr2 = &p;
+    cout << &p << "==" << ptr2 << endl;//0x61ff00==0x61ff00
+    cout << sizeof(ptr2) << endl;//4 - size of float pointer
+
+    // Pointer of Pointer Approach - 
+    int **pptr = &ptr;
+    cout<<&ptr<<"=="<<pptr<<endl;//0x61ff00==0x61ff00
+    
+    // Dereference Operator - 
+    int a = 20;
+    int *ptr3 = &a;
+    cout<<&a<<endl;//0x61fef8
+    cout<<*(&a)<<endl;//20
+    cout<<*ptr3<<endl;//20
+
+    // Null Pointer
+    // if pointer is not pointing the address of any variable then this will give Garbage Value
+    
+    int *ptr4;
+    cout<<ptr4<<"\n";//0x76e18c1d - Automatically gives Garbage Value
+
+
+
 }

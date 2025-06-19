@@ -171,48 +171,49 @@ int main()
 
 
     // Continue statement -
-    for (int i = 1; i <= 10; i++)
-    {
-        if (i == 3)
-        {
-            continue;
-        }
-        cout << i << endl;
-    }
-    /*
-    1
-    2
-    4
-    5
-    6
-    7
-    8
-    9
-    10
-    */
+    // for (int i = 1; i <= 10; i++)
+    // {
+    //     if (i == 3)
+    //     {
+    //         continue;
+    //     }
+    //     cout << i << endl;
+    // }
+    // /*
+    // 1
+    // 2
+    // 4
+    // 5
+    // 6
+    // 7
+    // 8
+    // 9
+    // 10
+    // */
 // ____________ ____________ ____________ ____________ ____________
 
 
     // Prime no. -
-    int num;
-    cout << "Enter the no. you wants to check for Prime or Not" << endl;
-    cin >> num;
+    // int num;
+    // cout << "Enter the no. you wants to check for Prime or Not" << endl;
+    // cin >> num;
 
-    if (num == 1)
-    {
-        cout << "No. is Neither Prime Nor Compite" << endl;
-    }
+    // if (num == 1)
+    // {
+    //     cout << "No. is Neither Prime Nor Compite" << endl;
+    // }
 
-    for (int i = 2; i <= sqrt(num); i++)
-    {
-        if (num % i == 0)
-        {
-            cout << "Not a Prime Number" << endl;
-            return 0;
-        }
-    }
-    cout << "prime number" << endl;
+    // for (int i = 2; i <= sqrt(num); i++)
+    // {
+    //     if (num % i == 0)
+    //     {
+    //         cout << "Not a Prime Number" << endl;
+    //         return 0;
+    //     }
+    // }
+    // cout << "prime number" << endl;
 // ____________ ____________ ____________ ____________ ____________
+
 
 
 
