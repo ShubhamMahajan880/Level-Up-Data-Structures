@@ -1,0 +1,2 @@
+1. -1 in cpp indicates that no element exist. because every time indexing starts with 0, so can never be -1 for any element
+2. when mentined no need to use EXTRA SPACE - then always use 2 POINTER APPROACH

@@ -332,18 +332,18 @@ using namespace std;
 
 // Qun - 
 
-int main()
-{
-    int x=5, y=10;
-    int *ptr1 = &x, *ptr2 = &y;
-    ptr2=ptr1;
+// int main()
+// {
+//     int x=5, y=10;
+//     int *ptr1 = &x, *ptr2 = &y;
+//     ptr2=ptr1;
 
-    cout<<ptr2<<endl;//0x61ff04
-    cout<<ptr1<<endl;//0x61ff04
-    cout<<&x<<endl;//0x61ff04   
+//     cout<<ptr2<<endl;//0x61ff04
+//     cout<<ptr1<<endl;//0x61ff04
+//     cout<<&x<<endl;//0x61ff04   
 
-    // What os the typr of the following variables - 
-    float*a,b;
-    // a - float pointer, b - normal float variable
+//     // What os the typr of the following variables - 
+//     float*a,b;
+//     // a - float pointer, b - normal float variable
      
-}
+// }

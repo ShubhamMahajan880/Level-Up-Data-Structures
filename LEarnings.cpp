@@ -9,7 +9,50 @@
 // #include<iomanip>
 // #include<cmath>
 using namespace std;
+
+void reverseArray(int arr[], int n)
+{
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
 int main()
 {
+    int n;
+    cout << "value of array size" << endl;
+    cin >> n;
+
+    int arr[n];
+    cout << "Write down the array elemenets - " << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << "So, the inserted array is - " << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int copyArr[n]; // an empty new array for getting all previous arra's value
+    for (int i = 0; i < n; i++)
+    {
+        int j = n - i - 1;
+        copyArr[i] = arr[j];
+    }    
     
+
+    // now elements are stored in copyarr in reverse ordedr, so storing in the origina  again
+
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = copyArr[i];
+    }
+
+    reverseArray(arr, n);
 }
