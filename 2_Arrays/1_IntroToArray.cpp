@@ -16,7 +16,7 @@ Arrays in cpp -  Linear Collection of Same Type of ELements that are stored toge
 Contiguos Memory Spaces.
  */
 
-// Initliazearray without any value
+//1)Initliazetion Methods of an array - 
 
 // int marks[50];             // 0 to 49
 // cout << marks[0] << endl;  // 4199136 - whn we don;t innitialize the array with any value it takes any garbage value in the memory
@@ -29,7 +29,7 @@ Contiguos Memory Spaces.
 // cout << sizeof(percentage) << endl;                                          // 20 - int size = 4 bytes , so 5 int = 4*5 = 20 bytes
 // cout << "lenght of array is - " << sizeof(percentage) / sizeof(int) << endl; // lenght of array is - 5
 
-// // Ouput & input of an array -
+// 1.1)// Ouput & input of an array -
 // int arr[5] = {0, 1, 2, 3, 4};
 // for (int i = 0; i < 5; i++)
 // {
@@ -46,7 +46,7 @@ Contiguos Memory Spaces.
 // cout << endl;
 // ____________ ____________
 
-// Largets Value in the array -
+//2) Largets Value/Max Element in the array -
 
 // int n;
 // cout << "n's value - " << endl;
@@ -80,7 +80,7 @@ Contiguos Memory Spaces.
 // cout << "So, Finally max value is - " << maxEle << endl;
 // ____________ ____________
 
-// Min Element  -
+//2.1) Min Element  -
 
 //     int n;
 //     cout << "n's value - " << endl;
@@ -126,9 +126,9 @@ Contiguos Memory Spaces.
 // So, Finally min value is - 12
 //  */
 // }
-// ____________ ____________
+// ____________ ____________ ____________ ____________ ____________
 
-//  Dereferences of Pointer concept in Array -
+//3)  Dereferences of Pointer concept in Array -
 
 // Array's are by default passed by reference. The value change in function affects in main fun also
 
@@ -199,7 +199,7 @@ Contiguos Memory Spaces.
 // }
 // ____________ ____________ ____________ ____________ ____________
 
-// Linear Search in array -
+//4) Linear Search in array -
 
 // my method -
 
@@ -264,9 +264,10 @@ Contiguos Memory Spaces.
 
 // // T.C -is simply depends on no. of itersations which is depend on no. of elements - O(n)
 // }
+// ____________ ____________ ____________ ____________ ____________
 
-// Reverse an array
-// 1) using extra space
+//5) Reverse an array
+// 5.1) using extra space
 
 // int main()
 // {
@@ -372,7 +373,7 @@ Contiguos Memory Spaces.
 // }
 // ____________ ____________
 
-// 2. - W/o using Extra Space1 - 2 POINTERS APPROACH
+// 5.2 - W/o using Extra Space1 - 2 POINTERS APPROACH
 
 // void printArray(int arr[], int n)
 // {
@@ -435,7 +436,7 @@ Contiguos Memory Spaces.
 
 // ____________ ____________
 
-// Binary Search - It alywas for the Sorted Array
+//6) Binary Search - It alywas for the Sorted Array
 
 // int main()
 // {
@@ -486,7 +487,8 @@ Contiguos Memory Spaces.
 // }
 
 // ____________ ____________
-// ArrayPointer - Array is always treat as constant pointer, array pointer can;t be modifed as in another variable poinyer
+
+//7) ArrayPointer - Array is always treat as constant pointer, array pointer can;t be modifed as in another variable poinyer
 
 // int main()
 // {
@@ -504,7 +506,7 @@ Contiguos Memory Spaces.
 // // arr = &y; // showing error as  - Expresion must be a modifiabble value
 // ____________ ____________
 
-// Pointer Arithmatic Approaches -
+//1. Pointer Arithmatic Approaches -
 
 // //1. using increment decrement operator. In array using pointer on incrementing and decrementing it does the operations by the datatype size.
 
@@ -583,9 +585,7 @@ cout<<*ptr4<<endl;//4
 cout<<(ptr2>ptr1)<<endl;//1 - Yes : True
 cout<<(ptr4<ptr3)<<endl;// 0 - NO : False
 cout<<(ptr3 == arr)<<endl;//1 - YES ptr3 and arr are same pointing
-// ____________ ____________ 
-
-
-
 
 }
+// ____________ ____________ ____________ ____________ ____________
+
