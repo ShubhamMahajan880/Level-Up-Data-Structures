@@ -374,62 +374,218 @@ Contiguos Memory Spaces.
 
 // 2. - W/o using Extra Space1 - 2 POINTERS APPROACH
 
-void printArray(int arr[], int n)
-{
-    cout << "Hence, the reversed array is - " << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
+// void printArray(int arr[], int n)
+// {
+//     cout << "Hence, the reversed array is - " << endl;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+// }
+// int main()
+// {
+//     int n;
+//     cout << "value of array size" << endl;
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Write down the array elemenets - " << endl;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     cout << "So, the inserted array is - " << endl;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+
+//     // usingn 2 pointer approch -
+//     int start = 0, end = n - 1;
+//     while (start < end)
+//     {
+
+//         swap(arr[start], arr[end]);
+
+//         /* or by usign swap method
+//         int temp = arr[start];
+//         arr[start] = arr[end];
+//         arr[end] = temp;
+//         */
+
+//         start++;
+//         end--;
+//     }
+
+//     printArray(arr, n);
+//     return 0;
+//     /*
+//     value of array size
+//     5
+//     Write down the array elemenets -
+//     89 56 45 23 12
+//     So, the inserted array is -
+//     89 56 45 23 12
+//     Hence, the reversed array is -
+//     12 23 45 56 89
+//     */
+// }
+
+// ____________ ____________
+
+// Binary Search - It alywas for the Sorted Array
+
+// int main()
+// {
+//     int n;
+//     cout << "value of array size" << endl;
+//     cin >> n;
+
+//     int arr[n];
+//     cout << "Write down the array elemenets - " << endl;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     cout << "So, the inserted array is - " << endl;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+
+//     int key;
+//     cout << "Now, enter the key you want to search for - " << endl;
+//     cin >> key;
+//     // For Binary Search Approach -
+//     int start = 0, end = n - 1;
+
+//     while (start <= end)
+//     {
+//         int mid = (start + end) / 2;
+
+//         if (arr[mid] == key)
+//         {
+//             cout<<"Element is here and got at - "<<mid<<endl;
+//             return 0;
+//         }
+//         else if (arr[mid] < key)
+//         {
+//             start = mid + 1;
+//         }
+//         else if (arr[mid] > key)
+//         {
+//             end = mid - 1;
+//         }
+//         cout << "Element not found" << endl;
+//     }
+//     return 0;
+// T.c -O(log n)
+// }
+
+// ____________ ____________
+// ArrayPointer - Array is always treat as constant pointer, array pointer can;t be modifed as in another variable poinyer
+
+// int main()
+// {
+// int x = 10;
+// int *ptr = &x;
+
+// int y=25;
+// ptr = &y;
+// cout<<*ptr<<"\n";//25 - in variable it is possible to update the pointer with another value and variable
+// return 0;
+
+// // int arr[5];
+// // cout<<arr<<endl;
+// // int y = 25;
+// // arr = &y; // showing error as  - Expresion must be a modifiabble value
+// ____________ ____________
+
+// Pointer Arithmatic Approaches -
+
+// //1. using increment decrement operator. In array using pointer on incrementing and decrementing it does the operations by the datatype size.
+
+//     int a = 10;
+//     int *ptr = &a;
+//     cout<<ptr<<endl;//0x61ff08
+//     ptr++;
+//     cout<<ptr<<endl;//0x61ff0c
+//     ptr--;
+//     cout<<ptr<<endl;// 0x61ff08
+// /*
+// 0x61ff08 - address of var pointer a
+// 0x61ff0c - on incrementing by ++ it'll increase by 4 bytes as int size is 4 bytes, so the new address is indcreased.
+// In hexadecimal initially it was 08, but now it's 0c - which is 12
+// 0x61ff08 - on doing the decrement operation, address again decreased by 4 bytes.
+// */
+// ____________ ____________ 
+
+// // 2. Addition & Substraction of Constants -
+//     int a1 = 5;
+//     int *ptr1 = &a1;
+//     cout<<ptr1<<endl;//0x61ff00 - here address is 0
+//     cout<<(ptr1+3)<<endl;//0x61ff0c - here increased by3*4bytes = 12 bytes which is c.
+// // Pointer me addition ya sustr. krne pr int ke size ke terms me hota he. Yaha add 3 * 4 byte as size of int = 12 bytes
+//     cout<<(ptr1-3)<<endl;
+// }
+
+// interms of array by Arithmatic operation using Dereferenc eoperator -
+
+// void printArr(int *ptr, int n)
+// {
+//     for (int i = 0; i < 7; i++)
+//     {
+//         cout << *(ptr + i) << endl;
+//     }
+// }
+
+// int main()
+// {
+//     int arr[] = {2, 4, 5, 6, 10, 12, 17};
+//     int n = sizeof(arr) / sizeof(int);
+//     printArr(arr, n);
+// }
+
+// /*
+// 2
+// 4
+// 5
+// 6
+// 10
+// 12
+// 17
+//  so here pritning all arrray values usig dereference operator */
+// ____________ ____________ 
+
+// 3. Addition & Substraction of Pointers 
 int main()
 {
-    int n;
-    cout << "value of array size" << endl;
-    cin >> n;
+    int a = 5;
+int *ptr1 = &a;
+int *ptr2 = ptr1 + 3;
 
-    int arr[n];
-    cout << "Write down the array elemenets - " << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    cout << "So, the inserted array is - " << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+cout<<ptr1<<endl;//0x61ff04
+cout<<ptr2<<endl;//0x61ff10
+cout<<ptr2 - ptr1 <<endl;//3
 
-    // usingn 2 pointer approch -
-    int start = 0, end = n - 1;
-    while (start < end)
-    {
+// interms of array - 
+int arr[20] = {1,2,3,4,5,6};
+int *ptr3 = arr; // base address of array
+int *ptr4 = ptr3+3;// base add + 3bytes 
 
-        swap(arr[start], arr[end]);
+cout<<*ptr3<<endl;//1
+cout<<*ptr4<<endl;//4
 
-        /* or by usign swap method
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        */
+// 4. Comparision Operators 
+cout<<(ptr2>ptr1)<<endl;//1 - Yes : True
+cout<<(ptr4<ptr3)<<endl;// 0 - NO : False
+cout<<(ptr3 == arr)<<endl;//1 - YES ptr3 and arr are same pointing
+// ____________ ____________ 
 
-        start++;
-        end--;
-    }
 
-    printArray(arr, n);
-    return 0;
-    /*
-    value of array size
-    5
-    Write down the array elemenets -
-    89 56 45 23 12
-    So, the inserted array is -
-    89 56 45 23 12
-    Hence, the reversed array is -
-    12 23 45 56 89
 
-     */
+
 }
